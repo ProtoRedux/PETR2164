@@ -8,16 +8,16 @@ namespace MobileAppDev
 {
     public partial class App : Application
     {
-        static NoteDatabase database;
+        static Database database;
 
         // Create the database connection as a singleton.
-        public static NoteDatabase Database
+        public static Database Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new NoteDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Notes.db3"));
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Notes.db3"));
                 }
                 return database;
             }

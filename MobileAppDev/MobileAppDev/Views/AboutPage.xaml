@@ -6,26 +6,27 @@
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="xamarin_logo.png"
-               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="0.85"
                VerticalOptions="Center"
-               HeightRequest="64" />
-        <!-- Layout children vertically -->
+               HeightRequest="62" />
+        <!-- Layout children vertically -->       
         <StackLayout Grid.Row="1"
-                     Margin="20"
-                     Spacing="20">
+                     Margin="{StaticResource PageMargin}"
+                     Spacing="24">
             <Label FontSize="22">
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="Notes"
+                            <Span Text="Birdwatcher Buddy"
                                   FontAttributes="Bold"
                                   FontSize="22" />
-                            <Span Text=" v1.0" />
+                            <Span Text=" v1.3" />
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+            <Label FontSize="16" Text="This app is designed to help aspiring birdwatchers keep tabs on any interesting specimens they may happen upon in the course of their day." />
             <Button Text="Learn more"
                     Clicked="OnButtonClicked" />
         </StackLayout>

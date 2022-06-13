@@ -12,10 +12,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\BirdEntryPage.xaml.cs">
+      <DependentUpon>BirdEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BirdSightingsPage.xaml.cs">
+      <DependentUpon>BirdSightingsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Views\AboutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\NoteEntryPage.xaml">
+    <EmbeddedResource Update="Views\BirdEntryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
