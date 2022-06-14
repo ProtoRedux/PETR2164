@@ -39,6 +39,7 @@
         <!-- Colour schemes -->
 
         <Color x:Key="AppPrimaryColor">#7db6f0</Color>
+        <Color x:Key="AppSecondaryColor">#a6f5ff</Color>
         <Color x:Key="AppBackgroundColor">AliceBlue</Color>
         <Color x:Key="PrimaryColor">Black</Color>
         <Color x:Key="SecondaryColor">White</Color>
@@ -53,11 +54,11 @@
 
         <Style TargetType="Button">
             <Setter Property="FontSize"
-                    Value="Medium" />
+                    Value="Large" />
             <Setter Property="BackgroundColor"
                     Value="{StaticResource AppPrimaryColor}" />
             <Setter Property="TextColor"
-                    Value="{StaticResource PrimaryColor}" />
+                    Value="{StaticResource SecondaryColor}" />
             <Setter Property="CornerRadius"
                     Value="5" />
         </Style>

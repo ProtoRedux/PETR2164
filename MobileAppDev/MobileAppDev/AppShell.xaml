@@ -29,7 +29,7 @@
                       Icon="icon_about.png"
                       ContentTemplate="{DataTemplate views:AboutPage}" />
         <ShellContent Title="Learn More"
-                      Icon="icon_about.png"
+                      Icon="icons8_opera_glasses_30.png"
                       ContentTemplate="{DataTemplate views:InfoPage}" />
 
     </TabBar>

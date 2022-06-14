@@ -13,10 +13,21 @@ namespace MobileAppDev.Views
         {
             InitializeComponent();
         }
-        async void OnButtonClicked(object sender, EventArgs e)
+        async void OnButtonRSPBClicked(object sender, EventArgs e)
         {
             // Launch the specified URL in the system browser.
-            await Launcher.OpenAsync("https://aka.ms/xamarin-quickstart");
+            await Launcher.OpenAsync("https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/birdwatching/");
+        }
+
+        async void OnButtonNATTREKlicked(object sender, EventArgs e)
+        {
+            // Launch the specified URL in the system browser.
+            await Launcher.OpenAsync("https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/birdwatching/");
+        }
+        async void OnButtonBSPOTClicked(object sender, EventArgs e)
+        {
+            // Launch the specified URL in the system browser.
+            await Launcher.OpenAsync("https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/birdwatching/");
         }
     }
 }

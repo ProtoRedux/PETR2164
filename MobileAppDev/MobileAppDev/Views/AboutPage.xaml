@@ -4,31 +4,32 @@
              x:Class="MobileAppDev.Views.AboutPage"
              Title="About">
     <!-- Layout children in two rows -->
-    <Grid RowDefinitions="Auto,*">
-        <Image Source="Logo.png" 
-        BackgroundColor="{StaticResource AppPrimaryColor}"
-               Opacity="0.85"
-               VerticalOptions="Center"
-               HeightRequest="62" />
-        <!-- Layout children vertically -->       
-        <StackLayout Grid.Row="1"
-                     Margin="{StaticResource PageMargin}"
+       <StackLayout Margin="{StaticResource PageMargin}"
                      Spacing="24">
-            <Label FontSize="22">
+        <Image Source="bwb_logo.png" 
+               VerticalOptions="Center"
+               HeightRequest="70" />
+        <Label FontSize="22">
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
                             <Span Text="Birdwatcher Buddy"
                                   FontAttributes="Bold"
                                   FontSize="22" />
-                            <Span Text=" v1.3" />
+                            <Span Text=" v1.4" />
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label FontSize="16" Text="This app is designed to help aspiring birdwatchers keep tabs on any interesting specimens they may happen upon in the course of their day." />
-            <Button Text="Learn more"
-                    Clicked="OnButtonClicked" />
-        </StackLayout>
-    </Grid>
+            <Label FontSize="18" Text="This app is designed to help aspiring birdwatchers keep tabs on any interesting specimens they may happen upon in the course of their day." />
+            <Label FontSize="20" FontAttributes="Bold" Text="Fun Fact!"/>
+        <Label FontSize="18" Text="If you want to delete sightings quicker you can swipe any of your previously recorded sightings in the direction of shown below to access an easy delete button."/>
+
+    <Grid  ColumnDefinitions="*,*,*,*">
+            <Image Grid.Column="0" Source="icons8_drag_right_50_chevron.png" VerticalOptions="Center" HorizontalOptions="End"></Image>
+            <Image Grid.Column="1" Source="icons8_drag_right_50_hand.png" VerticalOptions="Center" HorizontalOptions="End" ></Image>
+            <Image Grid.Column="2" Source="icons8_drag_right_50_chevron.png" VerticalOptions="Center" HorizontalOptions="Start"></Image>
+            <Image Grid.Column="3" Source="icons8_drag_right_50_chevron.png" VerticalOptions="Center" HorizontalOptions="Start"></Image>
+        </Grid>
+    </StackLayout>
 </ContentPage>

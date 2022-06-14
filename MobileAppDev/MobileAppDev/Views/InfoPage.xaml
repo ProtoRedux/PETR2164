@@ -4,31 +4,23 @@
              x:Class="MobileAppDev.Views.InfoPage"
              Title="Info">
     <!-- Layout children in two rows -->
-    <Grid RowDefinitions="Auto,*">
-        <Image Source="xamarin_logo.png"
-               BackgroundColor="{StaticResource AppPrimaryColor}"
-               Opacity="0.85"
-               VerticalOptions="Center"
-               HeightRequest="62" />
-        <!-- Layout children vertically -->
-        <StackLayout Grid.Row="1"
+    <StackLayout Grid.Row="1"
                      Margin="{StaticResource PageMargin}"
                      Spacing="24">
-            <Label FontSize="22">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Birdwatcher Buddy"
-                                  FontAttributes="Bold"
-                                  FontSize="22" />
-                            <Span Text=" v1.3" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="16" Text="This app is designed to help aspiring birdwatchers keep tabs on any interesting specimens they may happen upon in the course of their day." />
-            <Button Text="Learn more"
-                    Clicked="OnButtonClicked" />
-        </StackLayout>
-    </Grid>
+        <Image Source="bwb_logo.png" 
+               VerticalOptions="Center"
+               HeightRequest="70" />
+        <!-- Layout children vertically -->
+
+        <Label FontSize="22" HorizontalOptions="Center" Text="Just getting started?"/>
+        <Label FontSize="18" Text="If this is your first time birdwatching then don't fret check out these handy links below to get yourself started." />
+            <Button Text="Learn more with the RSPB"
+                    Clicked="OnButtonRSPBClicked" />
+            <Button Text="Look around with Naturetrek"
+                    Clicked="OnButtonNATTREKClicked" />
+            <Button Text="Get started with Bird Spot"
+                    Clicked="OnButtonBSPOTClicked" />
+
+    </StackLayout>
+
 </ContentPage>
