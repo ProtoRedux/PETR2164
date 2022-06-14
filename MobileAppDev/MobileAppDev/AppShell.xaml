@@ -12,9 +12,9 @@
             <Setter Property="Shell.ForegroundColor"
                     Value="{StaticResource SecondaryColor}" />
             <Setter Property="Shell.TitleColor"
-                    Value="{StaticResource SecondaryColor}" />
+                    Value="{StaticResource PrimaryColor}" />
             <Setter Property="Shell.TabBarUnselectedColor"
-                    Value="#95FFFFFF"/>
+                    Value="{StaticResource SecondaryColor}"/>
         </Style>
         <Style TargetType="TabBar"
                BasedOn="{StaticResource BaseStyle}" />
@@ -22,12 +22,15 @@
 
     <!-- Display a bottom tab bar containing two tabs -->
     <TabBar>
-        <ShellContent Title="Notes"
+        <ShellContent Title="Sightings Catalogue"
                       Icon="icon_feed.png"
                       ContentTemplate="{DataTemplate views:BirdSightingsPage}" />
-        <ShellContent Title="About"
+        <ShellContent Title="About This App"
                       Icon="icon_about.png"
                       ContentTemplate="{DataTemplate views:AboutPage}" />
+        <ShellContent Title="Learn More"
+                      Icon="icon_about.png"
+                      ContentTemplate="{DataTemplate views:InfoPage}" />
 
     </TabBar>
 </Shell>

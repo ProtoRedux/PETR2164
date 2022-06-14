@@ -30,9 +30,9 @@ namespace MobileAppDev.Views
             base.OnAppearing();
 
             // Retrieve all the notes from the database, and set them as the
-            // data source for the CollectionView.
+            // data source for the listings public Observable collection on line 17.
             Listings = await App.Database.GetBirdsListAsync();
-            collectionView.ItemsSource = Listings; //await App.Database.GetNotesAsync();
+            collectionView.ItemsSource = Listings; 
         }
         //Method to access the delete function via swiping rather than selecting the object and the pressing the delete button
         private void DeleteEntry_Swipe(object sender, EventArgs e)
