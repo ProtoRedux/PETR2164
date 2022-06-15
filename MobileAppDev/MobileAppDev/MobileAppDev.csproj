@@ -6,15 +6,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\BWB.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Images\BWB.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\BirdEntryPage.xaml.cs">
+      <DependentUpon>BirdEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BirdSightingsPage.xaml.cs">
+      <DependentUpon>BirdSightingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Views\AboutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\NoteEntryPage.xaml">
+    <EmbeddedResource Update="Views\BirdEntryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\InfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

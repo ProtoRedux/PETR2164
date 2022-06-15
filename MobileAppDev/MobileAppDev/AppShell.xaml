@@ -3,13 +3,34 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:MobileAppDev.Views"
        x:Class="MobileAppDev.AppShell">
+    <Shell.Resources>
+        <!-- Style Shell elements -->
+        <Style x:Key="BaseStyle"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="Shell.TitleColor"
+                    Value="{StaticResource PrimaryColor}" />
+            <Setter Property="Shell.TabBarUnselectedColor"
+                    Value="{StaticResource SecondaryColor}"/>
+        </Style>
+        <Style TargetType="TabBar"
+               BasedOn="{StaticResource BaseStyle}" />
+    </Shell.Resources>
+
     <!-- Display a bottom tab bar containing two tabs -->
     <TabBar>
-        <ShellContent Title="Notes"
+        <ShellContent Title="Sightings Catalogue"
                       Icon="icon_feed.png"
-                      ContentTemplate="{DataTemplate views:NotesPage}" />
-        <ShellContent Title="About"
+                      ContentTemplate="{DataTemplate views:BirdSightingsPage}" />
+        <ShellContent Title="About This App"
                       Icon="icon_about.png"
                       ContentTemplate="{DataTemplate views:AboutPage}" />
+        <ShellContent Title="Learn More"
+                      Icon="icons8_opera_glasses_30.png"
+                      ContentTemplate="{DataTemplate views:InfoPage}" />
+
     </TabBar>
 </Shell>

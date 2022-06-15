@@ -30,4 +30,41 @@
         </ResourceDictionary>        
     </Application.Resources>-->
     
+    <!-- Below are resources used by muliple pages in the application -->
+
+    <Application.Resources>
+
+        <Thickness x:Key="PageMargin">20</Thickness>
+        
+        <!-- Colour schemes -->
+
+        <Color x:Key="AppPrimaryColor">#7db6f0</Color>
+        <Color x:Key="AppSecondaryColor">#a6f5ff</Color>
+        <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+        <Color x:Key="PrimaryColor">Black</Color>
+        <Color x:Key="SecondaryColor">White</Color>
+        <Color x:Key="TertiaryColor">Silver</Color>
+
+        <!-- Implicit styles -->
+        <Style TargetType="ContentPage"
+               ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize"
+                    Value="Large" />
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="TextColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="CornerRadius"
+                    Value="5" />
+        </Style>
+
+
+
+    </Application.Resources>
+    
 </Application>
