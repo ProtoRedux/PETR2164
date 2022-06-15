@@ -17,6 +17,7 @@ namespace MobileAppDev.Views
         public ObservableCollection<BirdModel> Listings { get; set; }
         //sets up initial views to allow for swipe menues
         List<SwipeView> SwipeViews { get; set; }
+
         public BirdSightingsPage()
         {
             InitializeComponent();
@@ -77,8 +78,8 @@ namespace MobileAppDev.Views
             if (e.CurrentSelection != null)
             {
                 // Navigate to the NoteEntryPage, passing the ID as a query parameter.
-                BirdModel note = (BirdModel)e.CurrentSelection.FirstOrDefault();
-                await Shell.Current.GoToAsync($"{nameof(BirdEntryPage)}?{nameof(BirdEntryPage.ItemId)}={note.ID.ToString()}");
+                BirdModel target = (BirdModel)e.CurrentSelection.FirstOrDefault();
+                await Shell.Current.GoToAsync($"{nameof(BirdEntryPage)}?{nameof(BirdEntryPage.ItemId)}={target.ID.ToString()}");
             }
         }
 

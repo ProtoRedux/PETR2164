@@ -19,15 +19,15 @@ namespace MobileAppDev.Views
             await Launcher.OpenAsync("https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/birdwatching/");
         }
 
-        async void OnButtonNATTREKlicked(object sender, EventArgs e)
+        async void OnButtonNATTREKClicked(object sender, EventArgs e)
         {
             // Launch the specified URL in the system browser.
-            await Launcher.OpenAsync("https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/birdwatching/");
+            await Launcher.OpenAsync("https://www.naturetrek.co.uk/tour-focus/beginner-birding");
         }
         async void OnButtonBSPOTClicked(object sender, EventArgs e)
         {
             // Launch the specified URL in the system browser.
-            await Launcher.OpenAsync("https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/birdwatching/");
+            await Launcher.OpenAsync("https://www.birdspot.co.uk/bird-watching-for-beginners");
         }
     }
 }

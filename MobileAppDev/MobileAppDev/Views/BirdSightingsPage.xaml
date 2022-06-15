@@ -24,7 +24,7 @@
 
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add"
+        <ToolbarItem Text="Add New Sighting"
                      Clicked="OnAddClicked" />
     </ContentPage.ToolbarItems>
 
@@ -66,21 +66,20 @@
                         <Label Grid.Column="1" Grid.Row="1"
                                        Text="{Binding Species}"
                                        FontSize="Medium" />
-                        <Label Grid.Column="2" Grid.Row="1"
+                        <Label Grid.Column="1" Grid.Row="0"
                                        Text="{Binding CommonName}"
-                                       FontSize="Medium" />
-                        <Label Grid.Column="2" Grid.Row="1"
+                                       FontSize="Large" />
+                            <Label Grid.Column="1" Grid.Row="3"
                                        Text="{Binding Notes}"
                                        FontSize="Medium" />
-
-
-                        <Label Grid.Column="1" Grid.Row="2"
+                            <Label Grid.Column="1" Grid.Row="2"
                                        Text="{Binding DateSeen}"
                                        TextColor="{StaticResource TertiaryColor}"
-                                       FontSize="Medium" />
+                                       FontSize="Medium"/>
 
 
-                    </Grid>
+
+                        </Grid>
                     </SwipeView>
                 </StackLayout>
             </DataTemplate>

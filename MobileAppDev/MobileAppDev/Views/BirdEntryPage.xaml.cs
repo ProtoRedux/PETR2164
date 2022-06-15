@@ -53,22 +53,9 @@ namespace MobileAppDev.Views
                     Location = locationEntry.Text,
                     DateSeen = datePicker.Date,
                     Notes = NotesEntry.Text
-
                 });
-
-                ClearLabels();
                 await Shell.Current.GoToAsync("..");
             }
-
-            //var note = (BirdModel)BindingContext;
-            //note.DateSeen = DateTime.UtcNow;
-            //if (!string.IsNullOrWhiteSpace(note.Location))
-            //{
-            //    await App.Database.SaveNoteAsync(note);
-            //}
-
-            //// Navigate backwards
-            //await Shell.Current.GoToAsync("..");
         }
 
         async void OnDeleteButtonClicked(object sender, EventArgs e)
@@ -78,13 +65,6 @@ namespace MobileAppDev.Views
 
             // Navigate backwards
             await Shell.Current.GoToAsync("..");
-        }
-        private void ClearLabels()
-        {
-            SpeciesEntry.Text = string.Empty;
-            CommonEntry.Text = string.Empty;
-            locationEntry.Text = string.Empty;
-            NotesEntry.Text = string.Empty;
         }
     }
 }

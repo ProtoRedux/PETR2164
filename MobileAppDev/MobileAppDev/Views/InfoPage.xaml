@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileAppDev.Views.InfoPage"
-             Title="Info">
+             Title="Learning More">
     <!-- Layout children in two rows -->
     <StackLayout Grid.Row="1"
                      Margin="{StaticResource PageMargin}"
